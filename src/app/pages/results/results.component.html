@@ -1,0 +1,51 @@
+<div class="container mt-4">
+    <h2 class="text-primary mb-4">Resultados</h2>
+  
+    <div *ngIf="loading" class="alert alert-info">Cargando...</div>
+    <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+
+    <table class="table table-striped table-bordered" *ngIf="!loading && results.length">
+        <thead class="table-primary">
+        <tr>
+            <th>Puesto</th>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Promedio</th>
+            <th>Estado</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let result of results; let i = index">
+            <td>
+                <ng-container [ngSwitch]="i">
+                  <span *ngSwitchCase="0">🥇</span>
+                  <span *ngSwitchCase="1">🥈</span>
+                  <span *ngSwitchCase="2">🥉</span>
+                  <span *ngSwitchDefault>{{ i + 1 }}</span>
+                </ng-container>
+            </td>
+            <td>{{ result.full_name }}</td>
+            <td>{{ result.email }}</td>
+            <td>{{ result.average_score }}</td>
+            <td [ngClass]="{
+                'text-success': result.status === 'Aprobado',
+                'text-danger': result.status === 'Reprobado'
+                }">
+            {{ result.status }}
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div *ngIf="summary" class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+          Resumen de Resultados (JSON)
+        </div>
+        <div class="card-body">
+          <pre class="mb-0 bg-light p-3 rounded" style="white-space: pre-wrap;">
+            {{ summary | json }}
+          </pre>
+        </div>
+    </div>
+</div>
+  

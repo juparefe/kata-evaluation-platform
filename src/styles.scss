@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+$primary: #0d6efd;
+$secondary: #6c757d;
+$light: #f8f9fa;
+$dark: #343a40;
+$body-bg: $light;
+$body-color: #212529;
+
+@import "bootstrap/scss/bootstrap";
