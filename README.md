@@ -27,7 +27,7 @@ Asegúrate de tener instalado lo siguiente:
 Para poder utilizar este repositorio debes seguir estas instrucciones y luego dirigirte al [Repositorio Backend Kata Evaluation]([https://github.com/juparefe/Data-Warehouse-Server](https://github.com/juparefe/kata-evaluation-platform-backend)) y seguir las instrucciones para levantar el complemento de la aplicacion
 * Clonar el repositorio en el entorno local utilizando el comando 
 ```
-git clone [https://github.com/juparefe/Data-Warehouse.git](https://github.com/juparefe/kata-evaluation-platform.git)
+git clone [https://github.com/juparefe/kata-evaluation-platform.git](https://github.com/juparefe/kata-evaluation-platform.git)
 ```
 * Abrir la carpeta clonada utilizando algun editor de codigo
 * Instala las dependencias:
