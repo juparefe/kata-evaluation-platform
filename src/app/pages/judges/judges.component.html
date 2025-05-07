@@ -19,7 +19,7 @@
       </tbody>
     </table>
   
-    <div *ngIf="!loading && !judges.length" class="alert alert-warning">
+    <div *ngIf="!loading && !judges.length && !error" class="alert alert-warning">
       No hay jueces registrados.
     </div>
 </div>

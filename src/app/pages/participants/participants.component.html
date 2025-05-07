@@ -64,7 +64,7 @@
       </div>
     </div>
   
-    <div *ngIf="!loading && !participants.length" class="alert alert-warning">
+    <div *ngIf="!loading && !participants.length && !error" class="alert alert-warning">
       No hay participantes registrados.
     </div>
   </div>
