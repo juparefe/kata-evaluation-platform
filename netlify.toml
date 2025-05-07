@@ -1,6 +1,6 @@
 [build]
+  command = "ng build --configuration production"
   publish = "dist/kata-evaluation-platform"
-  command = "ng build"
 [[redirects]]
   from = "/*"
   to = "/index.html"
