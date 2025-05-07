@@ -1,6 +1,6 @@
 export const environment = {
     production: false,
-    apiBaseUrl: 'http://localhost:3001/V1',
+    apiBaseUrl: 'https://cup1peoq9h.execute-api.us-east-1.amazonaws.com/V1',
     login: '/login',
     judges: '/data/judges',
     participants: '/data/participants',
