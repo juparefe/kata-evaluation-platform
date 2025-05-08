@@ -50,9 +50,9 @@ export class ParticipantsComponent {
 
   initForm(): void {
     this.scoreForm = this.fb.group({
-      resume: [0, [Validators.required, Validators.min(0), Validators.max(100)]],
-      communication: [0, [Validators.required, Validators.min(0), Validators.max(100)]],
-      technical: [0, [Validators.required, Validators.min(0), Validators.max(100)]],
+      resume: [null, [Validators.required, Validators.min(0), Validators.max(10)]],
+      communication: [null, [Validators.required, Validators.min(0), Validators.max(10)]],
+      technical: [null, [Validators.required, Validators.min(0), Validators.max(10)]],
       bonus: [0, [Validators.min(0), Validators.max(10)]]
     });
   }
@@ -63,11 +63,9 @@ export class ParticipantsComponent {
   }
 
   modal(action: string): void {
-    console.log("Llega con action: ",action)
     const modalElement = document.getElementById('scoreModal');
     if (modalElement) {
       const modal = new bootstrap.Modal(modalElement);
-      console.log('mosal: ', modal);
       if (action === 'open') {
         modal.show();
       } else {

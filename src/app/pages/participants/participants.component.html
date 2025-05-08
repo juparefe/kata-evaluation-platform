@@ -53,10 +53,19 @@
                   <label>Puntos extra</label>
                   <input type="number" class="form-control" formControlName="bonus" max="100">
                 </div>
+                <div *ngIf="scoreForm.get('resume')?.invalid && scoreForm.get('resume')?.touched" class="text-danger">
+                  El puntaje debe estar entre 0 y 10.
+                </div>
               </div>
     
               <div class="mt-3">
-                <button type="submit" class="btn btn-success" data-bs-dismiss="modal">Guardar calificación</button>
+                <button
+                  type="submit"
+                  class="btn btn-success"
+                  data-bs-dismiss="modal"
+                  [disabled]="scoreForm.invalid">
+                  Guardar calificación
+                </button>
               </div>
             </form>
     
